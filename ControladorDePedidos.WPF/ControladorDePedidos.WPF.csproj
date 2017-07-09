@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C8E4844-3EA7-4AB2-A188-9D2B257C54DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControladorDePedidos.WPF</RootNamespace>
+    <AssemblyName>ControladorDePedidos.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonDataProvider, Version=1.1.149.27194, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataSource.Provider.1.1.149.27194\lib\net45\CommonDataProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DataSourceCommon, Version=1.1.149.27194, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataSource.Provider.1.1.149.27194\lib\net45\DataSourceCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DataSourceProvider, Version=1.1.149.27194, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataSource.Provider.1.1.149.27194\lib\net45\DataSourceProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DataSourceUtilities, Version=1.1.149.27194, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataSource.Provider.1.1.149.27194\lib\net45\DataSourceUtilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DbDataSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DbDataSource.1.0.0\lib\net45\DbDataSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="dn32Layout, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dn32Layout.WPF.1.0.4\lib\dn32Layout.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Web.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Web.UI.DataSource.1.0.0.0\lib\net45\EntityFramework.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Windows.11.0.3452\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Windows.11.0.3452\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ControladorDePedidos2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControladorDePedidos2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControladorDePedidos2DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControladorDePedidos2DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControladorDePedidosDataCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControladorDePedidosDataCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaCliente.xaml.cs">
+      <DependentUpon>FormBuscaCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeClienteBuscar.xaml.cs">
+      <DependentUpon>FormBuscaDeClienteBuscar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeCliente.xaml.cs">
+      <DependentUpon>FormBuscaDeCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeFornecedor.xaml.cs">
+      <DependentUpon>FormBuscaDeFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeVendas.xaml.cs">
+      <DependentUpon>FormBuscaDeVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaVendas.xaml.cs">
+      <DependentUpon>FormBuscaVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeFornecedor.xaml.cs">
+      <DependentUpon>FormCadastroDeFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormFornecedores.xaml.cs">
+      <DependentUpon>FormFornecedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelatorioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorioCliente.Designer.cs">
+      <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelatorioCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorioCompras.Designer.cs">
+      <DependentUpon>FormRelatorioCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelatorioProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorioProdutos.Designer.cs">
+      <DependentUpon>FormRelatorioProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioVendas.xaml.cs">
+      <DependentUpon>RelatorioVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Utilitarios.cs" />
+    <Page Include="FormBuscaCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBuscaDeClienteBuscar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBuscaDeCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBuscaDeFornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBuscaDeProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBuscaDeVendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBuscaVendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeFornecedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeVenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeMarca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormFornecedores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormVendas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCompras.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMarcas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProdutos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuPrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conversores\ConversorDeData.cs" />
+    <Compile Include="Conversores\ConversorDeEstoque.cs" />
+    <Compile Include="FormBuscaDeProduto.xaml.cs">
+      <DependentUpon>FormBuscaDeProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeCliente.xaml.cs">
+      <DependentUpon>FormCadastroDeCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeVenda.xaml.cs">
+      <DependentUpon>FormCadastroDeVenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeCompra.xaml.cs">
+      <DependentUpon>FormCadastroDeCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeMarca.xaml.cs">
+      <DependentUpon>FormCadastroDeMarca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeProduto.xaml.cs">
+      <DependentUpon>FormCadastroDeProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeUsuario.xaml.cs">
+      <DependentUpon>FormCadastroDeUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.xaml.cs">
+      <DependentUpon>FormClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendas.xaml.cs">
+      <DependentUpon>FormVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.xaml.cs">
+      <DependentUpon>FormCompras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas.xaml.cs">
+      <DependentUpon>FormMarcas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProdutos.xaml.cs">
+      <DependentUpon>FormProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarios.xaml.cs">
+      <DependentUpon>FormUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.xaml.cs">
+      <DependentUpon>MenuPrincipal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RelatorioVendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioCliente.resx">
+      <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioCompras.resx">
+      <DependentUpon>FormRelatorioCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioProdutos.resx">
+      <DependentUpon>FormRelatorioProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportClientes.rdlc" />
+    <EmbeddedResource Include="ReportCompras.rdlc" />
+    <EmbeddedResource Include="ReportProdutos.rdlc" />
+    <EmbeddedResource Include="ReportVendas.rdlc" />
+    <None Include="ControladorDePedidos2DataSet.xsc">
+      <DependentUpon>ControladorDePedidos2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControladorDePedidos2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControladorDePedidos2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControladorDePedidos2DataSet.xss">
+      <DependentUpon>ControladorDePedidos2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControladorDePedidos2DataSet6.xsc">
+      <DependentUpon>ControladorDePedidos2DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ControladorDePedidos2DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControladorDePedidos2DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControladorDePedidos2DataSet6.xss">
+      <DependentUpon>ControladorDePedidos2DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ControladorDePedidosDataCompras.xsc">
+      <DependentUpon>ControladorDePedidosDataCompras.xsd</DependentUpon>
+    </None>
+    <None Include="ControladorDePedidosDataCompras.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControladorDePedidosDataCompras.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControladorDePedidosDataCompras.xss">
+      <DependentUpon>ControladorDePedidosDataCompras.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCliente.xsc">
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetCliente.xss">
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dtCliente.xsc">
+      <DependentUpon>dtCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dtCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtCliente.xss">
+      <DependentUpon>dtCliente.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ControladorDePedidos.Model.Venda.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControladorDePedidos.Model\ControladorDePedidos.Model.csproj">
+      <Project>{78463d02-f4de-431e-b01b-1557e46649e0}</Project>
+      <Name>ControladorDePedidos.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControladorDePedidos.Repositorio\ControladorDePedidos.Repositorio.csproj">
+      <Project>{3c2ab354-d2ba-4bc7-bfe3-50ddf57225a8}</Project>
+      <Name>ControladorDePedidos.Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="img\lupa.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

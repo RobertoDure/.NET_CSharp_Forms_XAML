@@ -1,0 +1,42 @@
+﻿<Window x:Class="ControladorDePedidos.WPF.FormBuscaCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="FormBuscaCliente" Height="311.297" Width="636.402" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:dtCliente x:Key="dtCliente"/>
+        <CollectionViewSource x:Key="clienteViewSource" Source="{Binding Cliente, Source={StaticResource dtCliente}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource clienteViewSource}">
+        <Label x:Name="label" Content="CPF:" HorizontalAlignment="Left" Margin="42,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBuscaCPF" HorizontalAlignment="Left" Height="23" Margin="95,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="btBuscaCliente" Content="Buscar" HorizontalAlignment="Left" Margin="300,42,0,0" VerticalAlignment="Top" Width="75" Click="btBuscaCliente_Click"/>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="61,97,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Codigo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="codigoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Codigo, Mode=OneWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Telefone:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="telefoneTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding Telefone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Endereco:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox x:Name="enderecoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Endereco, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="CPF:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="cPFTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding CPF, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+
+    </Grid>
+</Window>
